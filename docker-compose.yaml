@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  mysql:
+    build: ./mysql
+    ports:
+      - "3306:3306"
+  spring-boot:
+    build: ./spring-boot
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mysql
+  angular:
+    build: ./angular
+    ports:
+      - "4200:4200"
