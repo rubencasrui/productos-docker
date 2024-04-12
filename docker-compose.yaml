@@ -1,17 +1,36 @@
 version: '3'
 
 services:
+
   mysql:
     build: ./mysql
     ports:
       - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - productos_network
+
   spring-boot:
     build: ./spring-boot
     ports:
       - "8080:8080"
     depends_on:
       - mysql
+    networks:
+      - productos_network
+
   angular:
     build: ./angular
     ports:
       - "4200:4200"
+    depends_on:
+      - spring-boot
+    networks:
+      - productos_network
+
+networks:
+  productos_network:
+
+volumes:
+  mysql_data:

@@ -10,6 +10,9 @@ COPY ./dist/productos-front/browser /app
 # Instala el servidor web de Node.js para servir la aplicación Angular
 RUN npm install -g http-server
 
+# Copia el archivo de configuración del servidor
+COPY http-server.json /app
+
 # Expone el puerto en el que el servidor web se ejecutará
 EXPOSE 4200
 
