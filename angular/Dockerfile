@@ -17,4 +17,4 @@ COPY http-server.json /app
 EXPOSE 4200
 
 # Comando para iniciar el servidor web y servir la aplicación Angular
-CMD ["http-server", "-p", "4200", "-c", "http-server.json"]
+CMD ["http-server", "-p", "4200", "-c", "http-server.json", "--proxy", "/index.html"]
