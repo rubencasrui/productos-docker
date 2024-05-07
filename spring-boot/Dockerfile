@@ -11,10 +11,10 @@ ENV DATABASE_DRIVER=com.mysql.cj.jdbc.Driver
 WORKDIR /app
 
 # Copia el archivo JAR de la aplicación Spring Boot
-COPY ./practica-0.0.1.jar /app/
+COPY ./vulnesolve-0.0.1.jar /app/
 
 # Expone el puerto en el que la aplicación Spring Boot se ejecutará
 EXPOSE 8080
 
 # Comando para ejecutar la aplicación Spring Boot
-CMD ["java", "-jar", "practica-0.0.1.jar"]
+CMD ["java", "-jar", "vulnesolve-0.0.1.jar"]
