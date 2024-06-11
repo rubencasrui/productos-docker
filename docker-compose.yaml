@@ -20,15 +20,6 @@ services:
     networks:
       - productos_network
 
-  # angular:
-  #   build: ./angular
-  #   ports:
-  #     - "4200:4200"
-  #   depends_on:
-  #     - spring-boot
-  #   networks:
-  #     - productos_network
-
 networks:
   productos_network:
 

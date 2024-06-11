@@ -8,12 +8,7 @@ project/
 ├── spring-boot/
 │   ├── Dockerfile
 │   └── target/
-│       └── your-spring-boot-app.jar
-│
-├── angular/
-│   ├── Dockerfile
-│   └── dist/
-│       └── your-angular-app/
+│       └── vulnesolve-0.0.1.jar
 │
 └── docker-compose.yml
 ```

@@ -1,7 +1,7 @@
-drop database if exists productos;
-create database productos;
+drop database if exists vulnesolve;
+create database vulnesolve;
 
-use productos;
+use vulnesolve;
 
 drop table if exists producto;
 create table producto(
